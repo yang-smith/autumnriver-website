@@ -1,0 +1,61 @@
+.layout img {
+    margin: auto;
+    max-width: 98%;
+    display: block;
+    height: auto;
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: column; /* 确保竖直方向的排列 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center;   /* 水平居中 */
+    height: 100%;            
+    padding-top: 50%; /* 这会将内容推到图片的中间偏下的位置 */
+}
+
+  .layout h1,
+  .layout h2 {
+    text-align: center;
+    font-size: 1.5em;             /* 增大字体大小 */
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif; /* 使用可爱的字体 */
+  }
+
+  .layoutWithBackground {
+    background-image: url('/images/Newburyport Meadows.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; /* 这会确保图片至少覆盖整个视窗的高度 */
+    background-color: rgba(0, 0, 0, 0.5); /* 黑色的半透明叠加 */
+    color: white; /* 设置文本颜色为白色以提高对比度 */  
+}
+  
+
+@keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .animatedContent {
+    opacity: 0;
+    visibility: hidden;
+    animation: slideUp 3s ease-out forwards;
+  }
+  
+  /* 如果有多个元素需要依次浮上来，可以为每个元素设置不同的延迟 */
+  .firstElement {
+    animation-delay: 0.5s;
+  }
+  
+  .secondElement {
+    animation-delay: 1s;
+  }
+  
